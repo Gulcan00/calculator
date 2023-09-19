@@ -31,11 +31,3 @@ function operate(operator, num1, num2) {
 }
 
 
-const numbers = document.querySelector(".calc-numbers");
-
-for (let i = 0; i < 10; i++) {
-    const button = document.createElement("div");
-    button.classList.add("button");
-    button.innerText = i;
-    numbers.appendChild(button);
-}
