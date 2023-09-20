@@ -32,12 +32,25 @@ function operate(operator, num1, num2) {
 
 function populateScreen(e) {
     const screen = document.querySelector(".calc-screen");
-    screen.innerText = screen.innerText + ' ' + e.target.innerText;
+    let content = screen.textContent;
+    if (e.target.classList.contains('number')) {
+        content += e.target.innerText;
+    } else {
+        content += ' ' + e.target.innerText + ' ';
+    }
+
+    screen.textContent = content;
 }
 
 const numbersAndOperators = document.querySelectorAll(".number, .operator");
 numbersAndOperators.forEach((button) => {
     button.addEventListener('click', populateScreen);
+})
+
+const clear = document.querySelector(".calc-clear");
+clear.addEventListener('click', (e) => {
+    const screen = document.querySelector(".calc-screen");
+    screen.innerHTML = null;
 })
 
 
