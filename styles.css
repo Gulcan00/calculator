@@ -80,3 +80,15 @@ body {
     margin-bottom: 4px;
     align-self: flex-end;
 }
+
+.button.calc-clear:hover {
+    background-color: rgb(19, 124, 19);
+}
+
+.button.equal {
+    background-color: #C51D34;
+}
+
+.button.equal:hover {
+    background-color: #cc2c41;
+}
