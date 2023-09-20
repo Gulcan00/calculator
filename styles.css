@@ -87,10 +87,10 @@ button.calc-clear:hover {
     background-color: rgb(19, 124, 19);
 }
 
-button.equal {
+button.equals {
     background-color: #C51D34;
 }
 
-button.equal:hover {
+button.equals:hover {
     background-color: #cc2c41;
 }
