@@ -45,7 +45,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     height: 70%;
-    max-width: 80%;
+    max-width: 70%;
     gap: 6px;
 }
 
@@ -78,5 +78,5 @@ body {
     background-color: darkgreen;
     color: blanchedalmond;
     margin-bottom: 4px;
-    margin-right: auto;
+    align-self: flex-end;
 }
