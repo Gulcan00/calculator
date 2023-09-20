@@ -30,4 +30,14 @@ function operate(operator, num1, num2) {
     }
 }
 
+function populateScreen(e) {
+    const screen = document.querySelector(".calc-screen");
+    screen.innerText = screen.innerText + ' ' + e.target.innerText;
+}
+
+const numbersAndOperators = document.querySelectorAll(".number, .operator");
+numbersAndOperators.forEach((button) => {
+    button.addEventListener('click', populateScreen);
+})
+
 
