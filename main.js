@@ -70,7 +70,7 @@ submit.addEventListener('click', (e) => {
         }
         else {
             const ans =  operate(obj.lastOperator, obj.result, num);
-            obj.result = ans ? ans : num;
+            obj.result = ans !== null ? ans : num;
         }
 
         return obj;
