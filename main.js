@@ -25,6 +25,7 @@ let operator = '';
 let input;
 const screen = document.querySelector(".calc-screen");
 const point = document.getElementById('point');
+const buttons = document.querySelectorAll("button");
 
 function operate(operator, num1, num2) {
     switch (operator)
@@ -100,3 +101,19 @@ backspace.addEventListener('click', () => {
     }
 })
 
+
+//Keyboard support
+window.addEventListener('keydown', (e) => {
+    const btnsArr = Array.from(buttons);
+    let btn = btnsArr.find(btn => btn.innerText === e.key.toLocaleLowerCase());
+    if (e.key === 'Enter') {
+        btn = btnsArr.find(btn => btn.classList.contains("equals"));
+    } 
+
+    if (e.key === '*') {
+        btn = btnsArr.find(btn => btn.innerText === 'x');
+    }
+    if (btn) {
+        btn.click();
+    }
+})
