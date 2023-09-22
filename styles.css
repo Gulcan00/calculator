@@ -80,7 +80,6 @@ button.calc-clear {
     background-color: darkgreen;
     color: blanchedalmond;
     margin-bottom: 4px;
-    align-self: flex-end;
 }
 
 button.calc-clear:hover {
@@ -93,4 +92,11 @@ button.equals {
 
 button.equals:hover {
     background-color: #cc2c41;
+}
+
+.top-btns {
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    gap: 0.5em;
 }

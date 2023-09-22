@@ -90,3 +90,13 @@ submit.addEventListener('click', (e) => {
 point.addEventListener('click', populateScreen);
 point.addEventListener('click', () => point.disabled = true)
 
+
+//Backspace
+const backspace = document.getElementById('backspace');
+backspace.addEventListener('click', () => {
+    if (input && screen.textContent) {
+        input.pop();
+        screen.textContent = screen.textContent.slice(0, -1);
+    }
+})
+
