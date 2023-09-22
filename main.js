@@ -24,6 +24,7 @@ let num1 = num2 = 0;
 let operator = '';
 let input;
 const screen = document.querySelector(".calc-screen");
+const point = document.getElementById('point');
 
 function operate(operator, num1, num2) {
     switch (operator)
@@ -38,12 +39,13 @@ function operate(operator, num1, num2) {
 
 function populateScreen(e) {
     let content = screen.textContent;
-    if (e.target.classList.contains('number')) {
+    if (e.target.classList.contains('number') || e.target.id === 'point') {
         content += e.target.innerText;
-    } else {
+        
+    } else if (e.target.classList.contains('operator')) {
         content += ' ' + e.target.innerText + ' ';
-    }
-
+        point.disabled = false;
+    } 
     screen.textContent = content;
     input = content.split(" ");
 }
@@ -58,11 +60,13 @@ const clear = document.querySelector(".calc-clear");
 clear.addEventListener('click', (e) => {
     screen.innerHTML = null;
     input = null;
+    point.disabled = false;
 })
 
 //Equals sign button
 const submit = document.querySelector(".equals");
 submit.addEventListener('click', (e) => {
+    if (input) {
     const resultObj = input.reduce((obj, item) => {
         const num = Number(item);
         if(isNaN(num)) {
@@ -79,6 +83,10 @@ submit.addEventListener('click', (e) => {
     const result = Math.round(resultObj.result * 10) / 10;
 
     screen.textContent = result;
+}
 })
 
+
+point.addEventListener('click', populateScreen);
+point.addEventListener('click', () => point.disabled = true)
 
