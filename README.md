@@ -6,4 +6,4 @@ This repository contains a simple calculator application. It can perform basic a
 Enter a number, choose an operation, enter a second number, and then press equals to see the result. Press clear to start a new calculation.
 
 ### Live Demo
-You can view a live demo of the calculator here.
+You can view a live demo of the calculator [here](https://gulcan00.github.io/calculator/).
