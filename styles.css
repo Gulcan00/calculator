@@ -8,19 +8,20 @@ body {
 
 .calc-container {
     background-color:midnightblue;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 550px;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 25px;
+    gap: 4px;
 }
 
 .calc-screen {
     background-color: seagreen;
-    height: 15%;
-    width: 90%;
+    height: 12%;
+    width: 75%;
     margin-top: 1em;
     font-family: 'Handjet', sans-serif;
     color: bisque;
@@ -36,16 +37,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 88.5%;
-    padding: 8px;
+    max-width: 100%;
     background-color: rgba(34, 34, 131, 0.849);
+    padding: 8px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    gap: 16px;
 }
 
 .calc-buttons {
     display: flex;
     flex-wrap: wrap;
     height: 70%;
-    max-width: 70%;
+    max-width: 80%;
     gap: 6px;
 }
 
@@ -56,6 +60,7 @@ button {
     width: 2.5em;
     height: 2.5em;
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
@@ -99,4 +104,11 @@ button.equals:hover {
     align-self: flex-end;
     align-items: center;
     gap: 0.5em;
+}
+
+
+button.material-symbols-outlined {
+    font-size: xx-large;
+    width: 75px;
+    height: 70px;
 }
